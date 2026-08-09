@@ -1,0 +1,99 @@
+@media(min-width: 998px) {
+    /* 1. Ajuste de alturas del contenedor */
+    #contenedor {
+        grid-template:
+            "redes" 50px
+            "menu" 80px
+            "banner" 600px
+            "bienvenida" auto
+            "ofrecemos" auto
+            "accion" auto
+            "productos" auto
+            "teem" auto
+            "pie" auto / 1fr;
+    }
+
+    /* 2. Arreglo del texto superior (Dirección y teléfono) */
+    #dir {
+        width: 60%;
+        display: flex;
+        align-items: center;
+    }
+
+    #dir p {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.2;
+    }
+
+    #redes {
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+    }
+
+    /* 3. Alineación de cabecera y logo */
+    #cabecera {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+    }
+
+    /* === MODIFICACIÓN DEL LOGO === */
+    .logo {
+        width: 220px; /* <--- Aumentado a un tamaño legible (aprox 2.2x el original) */
+        height: auto; /* Mantiene proporción */
+        margin-left: 0; /* Mantener 0 para que flexbox funcione bien */
+        display: flex; /* Alineación flexible si es un contenedor */
+        align-items: center;
+    }
+
+    /* === REGLA ADICIONAL: Asegura que la imagen crezca === */
+    .logo img {
+        width: 100%;
+        height: auto;
+    }
+    /* ============================ */
+
+    .checkbtn, #check {
+        display: none;
+    }
+
+    /* 4. Corrección del menú (pasa de flotante móvil a barra horizontal) */
+    .menu {
+        position: static;
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .menu li {
+        border: none;
+        width: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu li a {
+        line-height: normal;
+        margin-top: 0;
+        padding: 10px 20px;
+        color: #000;
+        font-weight: bold;
+        display: block;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu li a.active, 
+    .menu li a:hover {
+        background-color: deepskyblue;
+        color: white;
+    }
+}

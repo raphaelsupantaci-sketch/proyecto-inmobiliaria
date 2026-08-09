@@ -1,0 +1,61 @@
+#bienvenida {
+    grid-area: bienvenida;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#bienvenida img {
+    width: 45%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Alineación vertical alineada a la izquierda */
+#mensaje {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea todo a la izquierda */
+    text-align: left;
+    gap: 15px;
+}
+
+#mensaje h2 {
+    font-size: 2rem;
+    color: #0284c7;
+    margin: 0;
+}
+
+#mensaje p {
+    color: #334155;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Botón fijado a la izquierda */
+.boton {
+    display: inline-block;
+    align-self: flex-start; /* Anula cualquier empuje a la derecha */
+    margin-top: 10px;
+    margin-left: 0;
+    padding: 12px 28px;
+    background-color: #0284c7;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #0369a1;
+}
