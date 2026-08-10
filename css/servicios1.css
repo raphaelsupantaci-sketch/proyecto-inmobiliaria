@@ -1,0 +1,126 @@
+#servicios {
+    grid-area: ofrecemos;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8fafc;
+}
+
+#servicios h2 {
+    font-size: 2rem;
+    color: #0284c7;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* Contenedor flexible para poner las tarjetas lado a lado */
+#servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+}
+
+/* Diseño de cada tarjeta */
+.caja {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 35px 25px;
+    flex: 1 1 280px;
+    max-width: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación de luces parpadeantes (Azul y Amarillo) */
+@keyframes lucesNeon {
+    0% {
+        box-shadow: -8px -8px 22px rgba(2, 132, 199, 0.85), 
+                     8px  8px 22px rgba(250, 204, 21, 0.85);
+        border-color: #0284c7;
+    }
+    50% {
+        box-shadow:  8px  8px 28px rgba(2, 132, 199, 0.95), 
+                    -8px -8px 28px rgba(250, 204, 21, 0.95);
+        border-color: #facc15;
+    }
+    100% {
+        box-shadow: -8px -8px 22px rgba(2, 132, 199, 0.85), 
+                     8px  8px 22px rgba(250, 204, 21, 0.85);
+        border-color: #0284c7;
+    }
+}
+
+/* Contenedor principal de Servicios */
+#servicios {
+    grid-area: ofrecemos;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8fafc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+}
+
+#servicios h2 {
+    font-size: 2rem;
+    color: #0284c7;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* Tarjetas (.caja) */
+.caja {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 35px 25px;
+    flex: 1 1 280px;
+    max-width: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease;
+}
+
+.caja i {
+    font-size: 2.8rem;
+    color: #0284c7;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.caja h3 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.caja p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Efectos al pasar el cursor */
+.caja:hover {
+    transform: translateY(-8px);
+    animation: lucesNeon 1.8s infinite ease-in-out;
+}
+
+.caja:hover i {
+    color: #facc15;
+    transform: scale(1.15);
+}
